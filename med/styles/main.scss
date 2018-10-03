@@ -1,0 +1,1185 @@
+body {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    margin: 0;
+    line-height: 1.21;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#nav-block {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: solid 1px;
+    border-color: darkgrey;
+}
+
+#logo {
+    width: 196px;
+    height: 194px;
+    background-image: url("/img/logo.png");
+}
+
+#company-shirt-block {
+    display: block;
+    width: 100%;
+    padding: 14px 14px 7px 14px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#description {
+    font: {
+        size: 18px;
+        weight: 600;
+    }
+;
+    color: #222729;
+    margin: 10px;
+}
+
+#company-name {
+    background: #3271b8;
+    font: {
+        size: 20px;
+        weight: 600;
+    }
+;
+    line-height: 1;
+    color: #ffffff;
+    padding: 7px;
+}
+
+#addres-hours {
+    font: {
+        size: 17px;
+        weight: 400;
+    }
+;
+    padding: 12px 10px 0px 10px;
+}
+
+#head-block {
+    display: flex;
+    flex-flow: column;
+
+    #head-call {
+        flex-basis: auto;
+        box-sizing: border-box;
+        align-self: center;
+    }
+}
+
+#telephone {
+    display: block;
+    padding-left: 48px;
+    background: {
+        image: url("/img/phpne.png");
+        repeat: no-repeat;
+        position-y: center;
+    }
+;
+    font: {
+        size: 24px;
+        weight: 300;
+    }
+;
+    text-align: right;
+}
+
+#call-btn {
+    background: {
+        color: #F24A41;
+    }
+;
+    font: {
+        size: 16px;
+    }
+;
+    color: white;
+    padding: 9px;
+    margin: 9px 0px;
+    text-align: center;
+}
+
+#search-block {
+    display: flex;
+    flex-flow: row nowrap;
+    border: solid 1px darkgrey;
+    margin: 10px 0px;
+
+    #search-field {
+        width: calc(100% - 30px);
+        background-color: #fafafa;
+        border: none;
+    }
+
+    #search-btn {
+        background: {
+            image: url("/img/search.png");
+            repeat: no-repeat;
+            position: center;
+            color: #fafafa;
+        }
+        width: 30px;
+        height: 35px;
+        color: transparent;
+        border: none;
+        outline: none;
+    }
+}
+
+#slider {
+    margin: 15px;
+    border: solid 1px black;
+}
+
+h2 {
+    color: #bababa;
+    text-align: left;
+    overflow: hidden;
+    font-size: 1.2em;
+    margin: 1em 0 1em 15px;
+}
+
+h2:after {
+    display: inline-block;
+    content: "";
+    vertical-align: middle;
+    width: 100%;
+    height: 1px;
+    background-color: #bababa;
+    margin-right: -100%;
+}
+
+#otdel {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0px 15px;
+    justify-content: space-between;
+
+    span {
+        z-index: 2;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.7);
+        padding: 5px;
+    }
+
+    .half-otdel {
+        display: block;
+        width: calc(50% - 4px);
+        span {
+            width: calc(50% - 25px);
+        }
+        box-sizing: border-box;
+        padding: 2px 0;
+    }
+
+    .wide-otdel {
+        display: block;
+        width: 100%;
+        span {
+            width: calc(100% - 25px);
+        }
+        box-sizing: border-box;
+        padding: 3px 0;
+    }
+
+    img {
+        width: 100%;
+    }
+
+}
+
+#zapis {
+    display: flex;
+    flex-flow: row nowrap;
+    background: #f8f8f8;
+    box-sizing: border-box;
+    margin: 80px 15px;
+    position: relative;
+
+    #left-zapis {
+        height: 100%;
+        width: 30px;
+        background: #f8f8f8;
+        border: solid 1px #f8f8f8;
+        box-sizing: border-box;
+
+        &:before {
+            position: absolute;
+            top: -35px;
+            content: url("/img/alu.png");
+        }
+        &:after {
+            position: absolute;
+            bottom: -39px;
+            content: url("/img/ald.png");
+        }
+    }
+
+    //Крайний случай. так всё работает почти
+    //#zapis-back {
+    //    //width: calc(100% - 70px);
+    //    //height: calc(100% - 70px);
+    //    padding: 34px;
+    //    margin: auto;
+    //    background: url("/img/alu.png") no-repeat,
+    //        url("/img/aru.png") no-repeat right top,
+    //        url("/img/ald.png") no-repeat left bottom,
+    //        url("/img/ard.png") no-repeat right bottom;
+    //    border: solid 1px #222729;
+    //    #zapis-text {
+    //        display: block;
+    //        box-sizing: border-box;
+    //        //width: calc(100% - 60px);
+    //        width: 50%;
+    //        margin: auto;
+    //        text-align: center;
+    //    }
+    //}
+
+    #zapis-text {
+        display: flex;
+        flex-flow: column;
+        width: calc(100% - 60px);
+        align-items: center;
+        text-align: center;
+        padding: 25px 0;
+
+        div {
+            font: {
+                size: 1.1rem;
+            }
+        ;
+        }
+
+        input {
+            font: {
+                size: 1.5rem;
+            }
+        ;
+            width: 8em;
+            margin: 15px 0;
+            background: #f8f8f8;
+            border: none;
+        }
+
+        button {
+            background: {
+                color: #3271b8;
+            }
+        ;
+            font: {
+                size: 18px;
+            }
+        ;
+            color: white;
+            width: 100%;
+            border: none;
+            padding: 9px 0;
+        }
+    }
+
+    #right-zapis {
+        height: 100%;
+        width: 30px;
+        background: #f8f8f8;
+        right: 0;
+        border: solid 1px #f8f8f8;
+
+        &:before {
+            position: absolute;
+            top: -35px;
+            content: url("/img/aru.png");
+        }
+        &:after {
+            position: absolute;
+            bottom: -39px;
+            content: url("/img/ard.png");
+        }
+    }
+}
+
+#news {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0px 15px;
+    justify-content: space-between;
+
+    img {
+        width: 100%;
+        max-width: 310px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+        margin: auto;
+    }
+
+    #news-text-block {
+
+        h2 {
+            margin: 1em 0 0 0;
+            &:after {
+                display: none;
+            }
+        }
+
+        h3 {
+            color: #3271b8;
+            font-size: 1.1rem;
+            margin: 0.6em 0;
+        }
+
+        div {
+            font-size: 14px;
+        }
+
+    }
+
+    .news-details {
+        font-size: 14px;
+        margin: 0.8em 0;
+        color: #bababa;
+        text-decoration: underline;
+    }
+
+    #news-other {
+        border-top: solid 1px #bababa;
+        border-bottom: solid 1px #bababa;
+        list-style: none;
+        padding: 1em 0;
+        font-size: 14px;
+
+        li {
+            margin-top: 1.2rem;
+            text-decoration: underline;
+        }
+
+        :first-child {
+            margin-top: 0;
+        }
+
+        :last-child {
+            color: #bababa;
+        }
+    }
+}
+
+#social-frame {
+    display: block;
+    margin: 15px;
+    border: solid 2px black;
+}
+
+#aboutus {
+    display: block;
+    margin: 0 15px;
+
+    #aboutus-text {
+        p {
+            margin-top: 0;
+            font-size: 14px;
+            line-height: 1.38;
+        }
+    }
+}
+
+#footer {
+    width: 100%;
+    background-color: #383838;
+    color: white;
+    margin-top: 3rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 14px;
+
+    #footer-logo-block {
+        width: 176px;
+        height: 84px;
+        background: url("/img/footerlogo.png");
+    }
+
+    #footer-info-block {
+        display: flex;
+        flex-flow: column;
+
+        #footer-nav-block {
+            margin: 0 15px;
+            border-bottom: solid 2px;
+
+            ul {
+                display: flex;
+                list-style: none;
+                flex-flow: row wrap;
+                justify-content: center;
+                padding: 0;
+
+                li {
+                    padding: 10px;
+                }
+            }
+
+        }
+
+        #copyright-block {
+            text-align: center;
+
+            #copyright-indis {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+
+                #minilogo {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        width: 40px;
+        height: 40px;
+        background: url("/img/menu.png") no-repeat;
+        margin: 15px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #logo-nav {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: url("/img/micrologo.png") no-repeat;
+        margin: 15px;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #occular-version {
+        display: none;
+    }
+
+    #slider {
+        display: none;
+    }
+
+    #otdel {
+        :nth-child(2) {
+            order: -1;
+        }
+        :nth-child(7) {
+            order: 1;
+        }
+        font-size: 0.8em;
+    }
+
+    #footer-logo-block {
+        display: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 815px) {
+
+    nav {
+        width: 40px;
+        height: 40px;
+        background: url("/img/menu.png") no-repeat;
+        margin: 15px;
+
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #company-shirt-block {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        #logo-name-description {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+
+            #logo-company {
+                display: flex;
+                width: 90px;
+                height: 84px;
+                background: url("/img/logomiddle.png") no-repeat;
+                padding-right: 5px;
+                margin-right: 10px;
+                align-self: flex-end;
+            }
+        }
+
+        #addres-hours {
+            text-align: left;
+        }
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #occular-version {
+        display: none;
+    }
+
+    #slider {
+        display: none;
+
+    }
+
+    #otdel {
+        :nth-child(2) {
+            order: -1;
+        }
+        :nth-child(7) {
+            order: 1;
+        }
+        font-size: 0.8em;
+
+        .half-otdel {
+            span {
+                width: calc(50% - 29px);
+            }
+        }
+
+        .wide-otdel {
+            span {
+                width: calc(100% - 40px);
+            }
+        }
+    }
+
+    #zapis {
+        #zapis-text {
+            input {
+                font-size: 2rem;
+                width: 10em;
+                margin: 18px 0;
+            }
+
+            button {
+                margin: 8px 0;
+                width: 490px;
+            }
+        }
+    }
+
+    #footer-logo-block {
+        display: none;
+    }
+}
+
+@media (min-width: 816px) and (max-width: 980px) {
+
+    .container {
+        width: 800px;
+        margin: auto;
+    }
+
+    #nav-block {
+        margin: 0 15px;
+        width: calc(100% - 30px);
+
+        #logo-nav {
+            display: none;
+        }
+
+        nav {
+            width: 100%;
+            ul {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                list-style: none;
+                padding: 0;
+                margin: 13px 0;
+            }
+        }
+    }
+
+    #company-shirt-block {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        #logo-name-description {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+
+            #logo-company {
+                display: flex;
+                width: 90px;
+                height: 84px;
+                background: url("/img/logomiddle.png") no-repeat;
+                padding-right: 5px;
+                margin-right: 10px;
+                align-self: flex-end;
+            }
+        }
+
+        #addres-hours {
+            text-align: left;
+        }
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #occular-version {
+        display: none;
+    }
+
+    #head-block {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 15px;
+
+        #company-shirt-block {
+            display: block;
+            padding-left: 0;
+            text-align: left;
+
+            #addres-hours {
+                padding-left: 0;
+            }
+        }
+
+        #head-call {
+            min-width: 255px;
+        }
+    }
+
+    #otdel {
+        justify-content: space-around;
+
+        .half-otdel {
+            width: calc(33% - 2px);
+            span {
+                width: calc(33% - 22px);
+
+            }
+        }
+
+        .wide-otdel {
+            width: calc(67% - 3px);
+            span {
+                width: calc(67% - 35px);
+            }
+        }
+    }
+
+    #zapis {
+        #zapis-text {
+            input {
+                font-size: 2rem;
+                width: 10em;
+                margin: 18px 0;
+            }
+
+            button {
+                margin: 8px 0;
+                width: 490px;
+            }
+        }
+    }
+
+    #news {
+        flex-wrap: nowrap;
+        img {
+            display: none;
+        }
+
+        #news-text-block {
+            width: 75%;
+        }
+
+        #news-other {
+            width: 25%;
+            border-left: solid 1px #bababa;
+            border-top: none;
+            border-bottom: none;
+            padding: 0 1em;
+        }
+    }
+
+    #footer {
+        justify-content: center;
+
+        #footer-logo-block {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 981px) and (max-width: 1200px) {
+
+    $body: 970px;
+
+    .container {
+        width: $body;
+        margin: auto;
+    }
+
+    .wrapper-row {
+        flex-flow: row wrap;
+
+        .head-non-logo {
+            display: flex;
+            flex-flow: column;
+            width: calc(100% - 250px);
+
+            margin-right: 15px;
+        }
+    }
+
+    #logo {
+        display: flex;
+        width: 200px;
+        height: 200px;
+        background: url("/img/logo.png") no-repeat;
+        padding-right: 5px;
+        margin: 0 10px 0 15px;
+        align-self: flex-end;
+    }
+
+    #nav-block {
+        width: 100%;
+
+        #logo-nav {
+            display: none;
+        }
+
+        nav {
+            width: 100%;
+            ul {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                list-style: none;
+                padding: 0;
+                margin: 13px 0;
+            }
+        }
+    }
+
+    #company-shirt-block {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        #logo-name-description {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+
+            #logo-company {
+                display: none;
+            }
+
+            #company-name {
+                font-size: 1.8em;
+            }
+
+            #description {
+                margin-left: 0;
+                font-size: 1.3em;
+            }
+        }
+
+        #addres-hours {
+            text-align: left;
+        }
+
+        #occular-version {
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            height: 18px;
+            background: url("/img/ocular.png") no-repeat;
+            padding-left: 38px;
+            margin: 5px 0 0;
+            text-align: left;
+            text-decoration: underline;
+        }
+    }
+
+    #head-block {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 15px 0;
+        width: 100%;
+
+        #company-shirt-block {
+            display: block;
+            padding-left: 0;
+            text-align: left;
+
+            #addres-hours {
+                padding-left: 0;
+            }
+        }
+
+        #head-call {
+            min-width: 255px;
+        }
+    }
+
+    #otdel {
+        justify-content: space-around;
+        width: $body - 30px;
+
+        :nth-child(7) {
+            order: 1;
+        }
+
+        .half-otdel {
+            width: $body/4 - 16px;
+            span {
+                width: $body/4 - 22px;
+            }
+        }
+
+        .wide-otdel {
+            width: $body/2 - 24px;
+            span {
+                width: $body/2 - 27px;
+            }
+        }
+    }
+
+    #zapis {
+        #zapis-text {
+            div {
+                font-size: 1.6rem;
+            }
+
+            input {
+                font-size: 2rem;
+                width: 10em;
+                margin: 18px 0;
+            }
+
+            button {
+                margin: 8px 0;
+                width: 490px;
+                font-size: 1.21em;
+            }
+        }
+    }
+
+    #news {
+        flex-wrap: nowrap;
+        align-items: flex-start;
+
+        img {
+            display: flex;
+            margin: 0;
+        }
+
+        #news-text-block {
+            width: 75%;
+            margin: 0 1em;
+        }
+
+        #news-other {
+            width: 25%;
+            border-left: solid 1px #bababa;
+            border-top: none;
+            border-bottom: none;
+            padding: 0 1em;
+        }
+    }
+
+    #footer {
+        justify-content: center;
+
+        #footer-wrapper {
+            width: $body - 30px;
+            justify-content: space-between;
+            display: flex;
+            flex-flow: row nowrap;
+            margin: 0 15px;
+
+            #footer-logo-block {
+                display: flex;
+            }
+
+            #footer-info-block {
+                width: $body - 230px;
+
+                #footer-nav-block {
+                    margin: 0;
+
+                    ul {
+                        justify-content: space-between;
+
+                        li {
+                            padding: 0;
+                        }
+                    }
+                }
+
+                #copyright-block {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+
+                    #contacts {
+                        text-align: left;
+                        margin-right: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1201px) {
+
+    $body: 1200px;
+
+    .container {
+        width: $body;
+        margin: auto;
+    }
+
+    .wrapper-row {
+        flex-flow: row wrap;
+
+        .head-non-logo {
+            display: flex;
+            flex-flow: column;
+            width: calc(100% - 250px);
+
+            margin-right: 15px;
+        }
+    }
+
+    #logo {
+        display: flex;
+        width: 200px;
+        height: 200px;
+        background: url("/img/logo.png") no-repeat;
+        padding-right: 5px;
+        margin: 0 10px 0 15px;
+        align-self: flex-end;
+    }
+
+    #nav-block {
+        width: 100%;
+
+        #logo-nav {
+            display: none;
+        }
+
+        nav {
+            width: 100%;
+            ul {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                list-style: none;
+                padding: 0;
+                margin: 13px 0;
+            }
+        }
+    }
+
+    #company-shirt-block {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        #logo-name-description {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+
+            #logo-company {
+                display: none;
+            }
+
+            #company-name {
+                font-size: 1.8em;
+            }
+
+            #description {
+                margin-left: 0;
+                font-size: 1.3em;
+            }
+        }
+
+        #addres-hours {
+            text-align: left;
+        }
+
+        #occular-version {
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            height: 18px;
+            background: url("/img/ocular.png") no-repeat;
+            padding-left: 38px;
+            margin: 5px 0 0;
+            text-align: left;
+            text-decoration: underline;
+        }
+    }
+
+    #head-block {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 15px 0;
+        width: 100%;
+
+        #company-shirt-block {
+            display: block;
+            padding-left: 0;
+            text-align: left;
+
+            #addres-hours {
+                padding-left: 0;
+            }
+        }
+
+        #head-call {
+            min-width: 255px;
+        }
+    }
+
+    #otdel {
+        justify-content: space-around;
+        width: $body - 30px;
+
+        :nth-child(7) {
+            order: 1;
+        }
+
+        .half-otdel {
+            width: $body/5 - 16px;
+            span {
+                width: $body/5 - 22px;
+            }
+        }
+
+        .wide-otdel {
+            width: $body/5*2 - 24px;
+            span {
+                width: $body/5*2 - 27px;
+            }
+        }
+    }
+
+    #zapis {
+        #zapis-text {
+            div {
+                font-size: 1.6rem;
+            }
+
+            input {
+                font-size: 2rem;
+                width: 10em;
+                margin: 18px 0;
+            }
+
+            button {
+                margin: 8px 0;
+                width: 490px;
+                font-size: 1.21em;
+            }
+        }
+    }
+
+    #news {
+        flex-wrap: nowrap;
+        align-items: flex-start;
+
+        img {
+            display: flex;
+            margin: 0;
+        }
+
+        #news-text-block {
+            width: 75%;
+            margin: 0 1em;
+        }
+
+        #news-other {
+            width: 25%;
+            border-left: solid 1px #bababa;
+            border-top: none;
+            border-bottom: none;
+            padding: 0 1em;
+        }
+    }
+
+    #footer {
+        justify-content: center;
+
+        #footer-wrapper {
+            width: $body - 30px;
+            justify-content: space-between;
+            display: flex;
+            flex-flow: row nowrap;
+            margin: 0 15px;
+
+            #footer-logo-block {
+                display: flex;
+            }
+
+            #footer-info-block {
+                width: $body - 230px;
+
+                #footer-nav-block {
+                    margin: 0;
+
+                    ul {
+                        justify-content: space-between;
+
+                        li {
+                            padding: 0;
+                        }
+                    }
+                }
+
+                #copyright-block {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+
+                    #contacts {
+                        text-align: left;
+                        margin-right: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
